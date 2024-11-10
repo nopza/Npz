@@ -7,9 +7,6 @@
 
   <ItemGroup>
     <None Remove="get_gitinfo.bat" />
-    <Content Include="git-info">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 
   <ItemGroup>
