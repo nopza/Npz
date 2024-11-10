@@ -20,8 +20,4 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.1" />
   </ItemGroup>
 
-  <Target Name="PreBuild" BeforeTargets="PrebuildEvent">
-    <Exec Command="cd $(ProjectDir)&#xD;&#xA;get_gitinfo.bat" />    
-  </Target>
-
 </Project>
