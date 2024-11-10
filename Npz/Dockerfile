@@ -3,6 +3,11 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
 
+# ดึงโค้ดจาก Git repository
+ARG GIT_REPO=https://github.com/nopza/Npz.git
+ARG GIT_BRANCH=main
+RUN git clone -b $GIT_BRANCH $GIT_REPO .
+
 # ใช้ SDK image สำหรับ .NET 5 เพื่อ build แอปพลิเคชัน
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
